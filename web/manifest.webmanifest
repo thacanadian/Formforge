@@ -1,0 +1,20 @@
+{
+  "id": "/",
+  "name": "FORMFORGE — Fitness OS",
+  "short_name": "FORMFORGE",
+  "description": "Private mobile fitness tracking and offline coaching connected to your FormForge Windows server.",
+  "start_url": "/?source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "orientation": "any",
+  "background_color": "#232729",
+  "theme_color": "#232729",
+  "categories": ["fitness", "health", "productivity"],
+  "icons": [{"src":"/icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}],
+  "shortcuts": [
+    {"name":"Coaching Team","short_name":"Team","url":"/?page=team","icons":[{"src":"/icon.svg","sizes":"any","type":"image/svg+xml"}]},
+    {"name":"AI Coach","short_name":"Coach","url":"/?page=coach","icons":[{"src":"/icon.svg","sizes":"any","type":"image/svg+xml"}]},
+    {"name":"Log Nutrition","short_name":"Nutrition","url":"/?page=nutrition","icons":[{"src":"/icon.svg","sizes":"any","type":"image/svg+xml"}]}
+  ]
+}

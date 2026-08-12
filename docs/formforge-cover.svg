@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#080a0c"/><stop offset="1" stop-color="#172027"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#ff7a1a"/><stop offset="1" stop-color="#d5a24a"/>
+    </linearGradient>
+  </defs>
+  <rect width="1280" height="420" rx="18" fill="url(#bg)"/>
+  <path d="M0 84H1280M0 168H1280M0 252H1280M0 336H1280M128 0V420M256 0V420M384 0V420M512 0V420M640 0V420M768 0V420M896 0V420M1024 0V420M1152 0V420" stroke="#29343a" opacity=".38"/>
+  <rect x="74" y="69" width="76" height="76" rx="12" fill="url(#amber)"/>
+  <path d="M98 93h30v8h-21v10h18v8h-18v20h-9z" fill="#080a0c"/>
+  <text x="178" y="96" fill="#d5a24a" font-family="DejaVu Sans Mono,monospace" font-size="13" letter-spacing="4">FITNESS OPERATING SYSTEM / VERSION 1.8.0</text>
+  <text x="72" y="236" fill="#f4eee5" font-family="DejaVu Sans,Arial,sans-serif" font-size="82" font-weight="700" letter-spacing="-3">FORMFORGE</text>
+  <text x="76" y="281" fill="#a8b0b4" font-family="DejaVu Sans Mono,monospace" font-size="17">TRAINING · NUTRITION · RECOVERY · COACHING · PROGRESS</text>
+  <rect x="76" y="329" width="1128" height="2" fill="#2b363b"/>
+  <rect x="76" y="329" width="712" height="2" fill="url(#amber)"/>
+  <text x="76" y="366" fill="#7f8d94" font-family="DejaVu Sans Mono,monospace" font-size="12" letter-spacing="2">LOCAL-FIRST · MULTI-USER · WINDOWS + PWA + HOSTED BETA</text>
+  <circle cx="1157" cy="93" r="5" fill="#69b984"/>
+  <text x="1138" y="98" text-anchor="end" fill="#69b984" font-family="DejaVu Sans Mono,monospace" font-size="11" letter-spacing="2">VERIFIED SOURCE</text>
+</svg>

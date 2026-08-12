@@ -1,0 +1,61 @@
+services:
+  - type: web
+    name: formforge-beta
+    runtime: go
+    plan: starter
+    region: ohio
+    buildCommand: mkdir -p bin && go build -trimpath -ldflags "-s -w" -o bin/formforge .
+    startCommand: ./bin/formforge --cloud --server-only --data-dir /var/data
+    healthCheckPath: /health
+    autoDeployTrigger: commit
+    numInstances: 1
+    maxShutdownDelaySeconds: 30
+    disk:
+      name: formforge-data
+      mountPath: /var/data
+      sizeGB: 1
+    envVars:
+      - key: FORMFORGE_CLOUD
+        value: "true"
+      - key: FORMFORGE_DATA_DIR
+        value: /var/data
+      - key: FORMFORGE_SETUP_TOKEN
+        generateValue: true
+      - key: FORMFORGE_BUSINESS_NAME
+        value: FormForge
+      - key: FORMFORGE_LEGAL_NAME
+        sync: false
+      - key: FORMFORGE_ENTITY_DESCRIPTION
+        value: an individual sole proprietor
+      - key: FORMFORGE_SUPPORT_EMAIL
+        sync: false
+      - key: FORMFORGE_PRIVACY_EMAIL
+        sync: false
+      - key: FORMFORGE_MODERATION_EMAIL
+        sync: false
+      - key: FORMFORGE_MAILING_ADDRESS
+        sync: false
+      - key: FORMFORGE_MINIMUM_AGE
+        value: "18"
+      - key: FORMFORGE_MONTHLY_PRICE
+        value: $20.00 per month
+      - key: FORMFORGE_GOVERNING_LAW
+        value: Texas, United States
+      - key: FORMFORGE_TAKEDOWN_CONTACT
+        sync: false
+      - key: FORMFORGE_AI_MODE
+        value: auto
+      - key: FORMFORGE_AI_BASE_URL
+        value: https://api.openai.com/v1
+      - key: FORMFORGE_AI_MODEL
+        value: gpt-4o-mini
+      - key: FORMFORGE_AGENT_ENABLED
+        value: "false"
+      - key: FORMFORGE_AGENT_ALLOW_WEB
+        value: "false"
+      - key: FORMFORGE_AGENT_BASE_URL
+        value: https://api.openai.com/v1
+      - key: FORMFORGE_AGENT_MODEL
+        value: gpt-4o-mini
+      - key: FORMFORGE_AGENT_MAX_STEPS
+        value: "8"
